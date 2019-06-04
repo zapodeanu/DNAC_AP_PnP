@@ -17,6 +17,7 @@ from urllib3.exceptions import InsecureRequestWarning  # for insecure https warn
 from config import DNAC_PASS, DNAC_USER
 from config import PnP_WLC_NAME
 from config import SNOW_DEV
+from config import AP_ASSIGN_SITE
 
 urllib3.disable_warnings(InsecureRequestWarning)  # disable insecure https warnings
 
@@ -42,7 +43,7 @@ def main():
 
     # device info and site
 
-    pnp_device_assign = {'device_hostname': 'APB026.80DF.6E18', 'site_name': 'PDX', 'floor_name': 'Floor 3'}
+    pnp_device_assign = AP_ASSIGN_SITE
 
     site_name = pnp_device_assign['site_name']
     floor_name = pnp_device_assign['floor_name']
